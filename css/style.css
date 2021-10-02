@@ -1,0 +1,327 @@
+/* start var  */
+:root {
+  --Pink: hsl(322, 100%, 66%);
+  /* ------------------------ */
+  --Very-Pale-Cyan: hsl(193, 100%, 96%);
+  --Very-Dark-Cyan: hsl(192, 100%, 9%);
+  --Grayish-Blue: hsl(208, 11%, 55%);
+}
+/* end var  */
+/* start globel values  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  /* for headings  */
+  /* font-family: "Poppins", sans-serif; */
+  /* for body  */
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end globel values  */
+/* start header  */
+header {
+  padding: 40px 0;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  height: 30px;
+}
+header p {
+  padding: 11px 55px;
+  background-color: #fff;
+  border-radius: 20px;
+  font-size: 13px;
+  color: var(--Very-Dark-Cyan);
+  box-shadow: 0px 1px 10px 1px #0c0c0c1a;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 1;
+}
+header p:hover {
+  opacity: 0.5;
+}
+@media (max-width: 768px) {
+  header img {
+    height: 20px;
+  }
+  header p {
+    font-size: 11px;
+    padding: 5px 20px;
+  }
+}
+/* end header  */
+/* start landing  */
+.landing {
+  height: 730px;
+  background-image: url(../images/bg-hero-desktop.svg);
+  background-size: cover;
+  background-color: var(--Very-Pale-Cyan);
+  padding: 140px 0;
+}
+.landing .container .box {
+  display: flex;
+  align-items: center;
+}
+.landing h1 {
+  color: var(--Very-Dark-Cyan);
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+.landing p {
+  color: var(--Very-Dark-Cyan);
+  line-height: 1.6;
+  font-size: 16px;
+}
+button {
+  padding: 15px 60px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--Pink);
+  color: var(--Very-Pale-Cyan);
+  font-size: 12px;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0px 2px 11px 0 #3333334f;
+  transition: 0.3s;
+  opacity: 1;
+}
+button:hover {
+  opacity: 0.5;
+}
+.landing img {
+  width: 55%;
+  margin-left: 50px;
+}
+@media (max-width: 768px) {
+  .landing {
+    background-image: url("../images/bg-hero-mobile.svg");
+    height: 100vh;
+  }
+  .landing .container .box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .landing h1 {
+    font-size: 25px;
+    padding: 0 20px;
+  }
+  .landing p {
+    padding: 0 18px;
+    margin-bottom: 15px;
+  }
+  .landing img {
+    margin: 60px 0 0;
+    width: 310px;
+  }
+}
+/* end landing  */
+/* start section  */
+.section {
+  padding: 120px 0 180px;
+  position: relative;
+}
+.section .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 20px;
+  box-shadow: 0 0 10px 1px #33333311;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.section .box .text {
+  padding: 0px 100px;
+}
+.section .box h1 {
+  color: var(--Very-Dark-Cyan);
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.section .box p {
+  line-height: 1.6;
+  color: var(--Grayish-Blue);
+}
+.section .box img {
+  width: 30%;
+  margin-left: 100px;
+}
+.section .box:nth-child(2) {
+  flex-direction: row-reverse;
+}
+.section .box:nth-child(2) .text {
+  padding: 0px 0 0 190px;
+}
+.end-box {
+  text-align: center;
+  width: 600px;
+  box-shadow: 0 0 10px 1px #33333311;
+  padding: 40px 0;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  margin-top: 70px;
+}
+.end-box h1 {
+  color: var(--Very-Dark-Cyan);
+  font-size: 25px;
+}
+
+@media (max-width: 768px) {
+  .section .box,
+  .section .box:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+  .section img {
+    width: 260px !important;
+    margin: 0 !important;
+  }
+  .section .box .text,
+  .section .box:nth-child(2) .text {
+    text-align: center;
+    padding: 0;
+    margin-top: 50px;
+  }
+  .end-box {
+    width: 90%;
+  }
+}
+/* end section  */
+/* start footer  */
+footer {
+  padding-top: 140px;
+  padding-bottom: 80px;
+  background-color: var(--Very-Dark-Cyan);
+}
+footer .row {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 14px;
+}
+footer .main-col {
+  max-width: 30%;
+  /* min-width: 30%; */
+}
+footer .main-col > img {
+  filter: brightness(0) invert(1);
+  margin-bottom: 40px;
+  height: 30px;
+}
+footer .main-col .location,
+footer .main-col .phone,
+footer .main-col .mail {
+  display: flex;
+  margin-bottom: 30px;
+}
+footer .main-col .location img,
+footer .main-col .phone img,
+footer .main-col .mail img {
+  margin-right: 15px;
+  height: 14px;
+  margin-top: 4px;
+}
+footer ul {
+  list-style: none;
+}
+footer .col {
+  margin-top: 76px;
+}
+footer .col li {
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+footer .cen li:hover {
+  border-bottom: 1px solid #fff;
+}
+footer .end {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .end p {
+  font-size: 10px;
+}
+footer .social {
+  display: flex;
+  width: calc((27px * 3) + 20px);
+  justify-content: space-between;
+}
+footer .end i {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+footer .end i:hover {
+  color: var(--Pink);
+  border-color: var(--Pink);
+}
+@media (max-width: 768px) {
+  footer .row {
+    flex-direction: column;
+  }
+  footer .main-col {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  footer .main-col .location,
+  footer .main-col .phone,
+  footer .main-col .mail {
+    margin-bottom: 20px;
+  }
+  footer .col {
+    margin-top: 0;
+  }
+  footer .end {
+    align-items: center;
+    margin-top: 30px;
+  }
+  footer .social {
+    margin-bottom: 25px;
+  }
+}
+/* end footer  */
